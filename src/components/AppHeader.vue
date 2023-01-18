@@ -1,10 +1,12 @@
 <script>
 import TopHeaderComponent from './TopHeaderComponent.vue'
+import HeaderNavBarComponent from './HeaderNavBarComponent.vue'
 
 export default {
 
 components:{
   TopHeaderComponent,
+  HeaderNavBarComponent,
 }
 
 }
@@ -15,7 +17,8 @@ components:{
 <template>
     <header>
         <TopHeaderComponent />
-        
+        <HeaderNavBarComponent />
+
     </header>
   
 </template>
