@@ -16,15 +16,12 @@ components:{
 </script>
 
 <template>
- <div>
   <AppHeader />
- </div>
- <div>
+ 
   <AppMain />
- </div>
- <div>
+ 
   <AppFooter />
- </div>
+ 
  
 </template>
 
