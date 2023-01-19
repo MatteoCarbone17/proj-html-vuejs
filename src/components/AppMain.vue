@@ -5,6 +5,7 @@ import ButtonComponet from './ButtonComponet.vue';
 import CardsComponent from './CardsComponent.vue';
 import JumboCardsComponent from './JumboCardsComponent.vue';
 import BannerComponent from './BannerComponent.vue';
+import BannerLowComponent from './BannerLowComponent.vue';
 
 export default {
 
@@ -15,6 +16,7 @@ export default {
         CardsComponent,
         JumboCardsComponent,
         BannerComponent,
+        BannerLowComponent,
     },
     data() {
         return {
@@ -131,6 +133,7 @@ export default {
     <section class="d-flex justify-content-evenly arrivals-cards">
         <CardsComponent v-for="itemCard in ArrivalsCardsList" :image="itemCard.image" />
     </section>
+    <BannerLowComponent />
 
 </template>
 
