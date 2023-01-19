@@ -4,10 +4,10 @@ import HeaderNavBarComponent from './HeaderNavBarComponent.vue'
 
 export default {
 
-components:{
-  TopHeaderComponent,
-  HeaderNavBarComponent,
-}
+    components: {
+        TopHeaderComponent,
+        HeaderNavBarComponent,
+    }
 
 }
 
@@ -20,7 +20,7 @@ components:{
         <HeaderNavBarComponent />
 
     </header>
-  
+
 </template>
 
 <style  lang="scss">

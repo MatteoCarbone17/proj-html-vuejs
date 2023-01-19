@@ -27,9 +27,9 @@ export default {
             </div>
             <div class="offset-2">
             </div>
-            <div class="col-6">
-                <ul class="nav-bar d-flex justify-content-evenly">
-                    <li v-for="nav in navList ">
+            <div class="col-6  wrap-row">
+                <ul class="nav-bar d-flex align-items-center justify-content-evenly">
+                    <li v-for="nav in navList " class="d-flex align-items-center">
                       <a href="#">  {{ nav  }} <i class="fa-solid fa-angle-down"></i>   </a> 
                     </li>
                 </ul>
@@ -50,16 +50,22 @@ section{
 }
 div.wrap-row{
     height: 100%;
+    line-height: 100%;
 }
 
 ul.nav-bar{
-
+  height: 100%;
     li{
         list-style-type: none;
-
+        height: 100%;
         a{
             text-decoration: none;
             color: $edward-color;
+            line-height: 120px;
+
+            &:hover{
+                border-top: $blue-color solid 2px;
+            }
         }
 
     }
