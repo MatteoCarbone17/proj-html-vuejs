@@ -61,6 +61,24 @@ export default {
                     image: 'hipster_black_top-200x260',
                 },
             ],
+            ArrivalsCardsList: [
+                {
+                    image: 'black_elegant_leather_jacket-400x520',
+                },
+                {
+                    image: 'hipster_black_top-400x520',
+                },
+                {
+                    image:  'black_leather_suit-400x520',
+                },
+                {
+                    image:'spring_printed_dress-400x520',
+                },
+                {
+                    image: 'modern_love_tee-400x520'
+                },
+
+            ],
             ProductsTitleList: [
                 {
                     title: 'Featured Products',
@@ -101,7 +119,7 @@ export default {
     <ButtonComponet />
     <section class="container d-flex">
         <CardsComponent v-for="itemCard in cardsList" :image="itemCard.image" :title="itemCard.title"
-            :description="itemCard.description" :price="itemCard.price"/>
+            :description="itemCard.description" :price="itemCard.price" />
     </section>
     <JumboCardsComponent />
     <TitleComponent v-for="item in  SellerTitleList" :title="item.title" :para="item.para" />
@@ -109,9 +127,14 @@ export default {
         <CardsComponent v-for="itemCard in  SellerCardList" :image="itemCard.image" />
     </section>
     <BannerComponent />
+    <TitleComponent v-for="item in ArrivalsTitleList" :title="item.title" :para="item.para" />
+    <section class="d-flex justify-content-evenly arrivals-cards">
+        <CardsComponent v-for="itemCard in ArrivalsCardsList" :image="itemCard.image" />
+    </section>
 
 </template>
 
 <style scoped lang="scss">
+
 
 </style>
