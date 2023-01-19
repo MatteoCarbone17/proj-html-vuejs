@@ -4,6 +4,7 @@ import TitleComponent from "./TitleComponent.vue";
 import ButtonComponet from './ButtonComponet.vue';
 import CardsComponent from './CardsComponent.vue';
 import JumboCardsComponent from './JumboCardsComponent.vue';
+import BannerComponent from './BannerComponent.vue';
 
 export default {
 
@@ -13,6 +14,7 @@ export default {
         ButtonComponet,
         CardsComponent,
         JumboCardsComponent,
+        BannerComponent,
     },
     data() {
         return {
@@ -106,6 +108,7 @@ export default {
     <section class="container d-flex justify-content-center">
         <CardsComponent v-for="itemCard in  SellerCardList" :image="itemCard.image" />
     </section>
+    <BannerComponent />
 
 </template>
 
