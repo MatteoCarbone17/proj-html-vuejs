@@ -71,10 +71,10 @@ export default {
                     image: 'hipster_black_top-400x520',
                 },
                 {
-                    image:  'black_leather_suit-400x520',
+                    image: 'black_leather_suit-400x520',
                 },
                 {
-                    image:'spring_printed_dress-400x520',
+                    image: 'spring_printed_dress-400x520',
                 },
                 {
                     image: 'modern_love_tee-400x520'
@@ -105,6 +105,30 @@ export default {
                     para: 'The latest Classic Shop News',
                 },
             ],
+            BlogCardsList: [
+                {
+                    image: 'post_img_12-200x125',
+                    title: 'Aenean lobortis sapiem enim viverra',
+                    comment: "Semptember 9th,2015 | 0 Comments",
+                    description: 'Donac finibus sit amet orci eget ulticies. Praesent posuere ante ut erat fringilla',
+
+                },
+                {
+                    image: 'post_img_11-200x125',
+                    title: 'Duis ac massa semper maximus',
+                    comment: "Semptember 9th,2015 | 0 Comments",
+                    description: 'Donac finibus sit amet orci eget ulticies. Praesent posuere ante ut erat fringilla',
+
+                },
+                {
+                    image: 'post_img_10-200x125',
+                    title: 'Nunc fermint nulla eu justo sem id',
+                    comment: "Semptember 9th,2015 | 0 Comments",
+                    description: 'Donac finibus sit amet orci eget ulticies. Praesent posuere ante ut erat fringilla',
+
+                },
+
+            ],
         }
     },
     methods: {
@@ -134,10 +158,15 @@ export default {
         <CardsComponent v-for="itemCard in ArrivalsCardsList" :image="itemCard.image" />
     </section>
     <BannerLowComponent />
+    <TitleComponent v-for="item in  BlogTitleList" :title="item.title" :para="item.para" />
+    <section class="container d-flex justify-content-center">
+        <CardsComponent class="col-3 d-flex justify-content-center justify-content-between"
+            v-for="itemCard in  BlogCardsList" :image="itemCard.image" :title="itemCard.title"
+            :description="itemCard.description" :comment="itemCard.comment" />
+    </section>
 
 </template>
 
 <style scoped lang="scss">
-
 
 </style>

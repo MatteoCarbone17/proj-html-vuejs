@@ -5,6 +5,7 @@ export default {
         title: String,
         description: String,
         price: String,
+        comment:String,
     },
 
     data() {
@@ -28,6 +29,7 @@ export default {
             <img :src="getImagePath(image)" class="card-img-top" :alt="description">
             <div class="card-body">
                 <h5 class="card-title">{{ title }}</h5>
+                <p> {{ comment  }} </p>
                 <p class="card-text">{{ description }}</p>
                 <span>{{ price }} </span>
             </div>
