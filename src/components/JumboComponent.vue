@@ -50,8 +50,9 @@ div.wrap {
 
 button{
     border-radius: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: .5rem 1.7rem;
+    text-transform: uppercase;
 }
 
 div.title-jumbo {
@@ -59,10 +60,12 @@ div.title-jumbo {
     h1 {
         font-size: 7rem;
         margin-bottom: 1rem;
+        font-weight: 600;
     }
 
     p {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
 
     }
 }
