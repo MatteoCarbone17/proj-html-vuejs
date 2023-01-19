@@ -1,10 +1,12 @@
 <script>
 import JumboComponent from './JumboComponent.vue'
+import TitleComponent from "./TitleComponent.vue";
 
 export default {
 
     components: {
         JumboComponent,
+        TitleComponent,
        
     }
 
@@ -13,6 +15,7 @@ export default {
 
 <template>
     <JumboComponent />
+    <TitleComponent />
   
 </template>
 

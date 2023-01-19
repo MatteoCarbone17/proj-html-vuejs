@@ -5,6 +5,9 @@
 
 <template>
     <section class="bg-jumbo">
+        <div class="logo">
+            <img src="" alt="" srcset="">
+        </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col wrap d-flex justify-content-center align-items-center">
@@ -36,12 +39,16 @@
 <style scoped lang="scss">
 section.bg-jumbo {
     background-image: url(../assets/img/home1_slide_three_bg_2.jpg);
-
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 40%;
     background-position-x: 50%;
     height: 850px;
+    position: relative;
+    div.logo{
+        position: absolute;
+
+    }
 }
 
 div.wrap {
