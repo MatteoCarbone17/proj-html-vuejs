@@ -1,33 +1,14 @@
 <script>
 export default {
+    props: {
+        image: String,
+        title: String,
+        description: String,
+        price: String,
+    },
+
     data() {
         return {
-            cardsList: [
-                {
-                    image: 'black_elegant_leather_jacket-200x260',
-                    title: 'Black Leather Jacket',
-                    description: 'Men,Jackets,Jeans',
-                    price: '$200'
-                },
-                {
-                    image: 'black_leather_suit-200x260',
-                    title: 'Black Leather Suit',
-                    description: 'Men,Jackets',
-                    price: '$176'
-                },
-                {
-                    image: 'blue_jacket_and_white_stripe_tee-200x260',
-                    title: 'Blue Jachet & Stripe Tee',
-                    description: 'Men,Jackets,Suits',
-                    price: '$580'
-                },
-                {
-                    image: 'modern_black_leather_suit-200x260',
-                    title: 'Modern Black Leather Suit',
-                    description: 'Men,Jackets',
-                    price: '$96'
-                },
-            ],
         }
     },
     methods: {
@@ -42,13 +23,13 @@ export default {
 </script>
 
 <template>
-    <section class="d-flex justify-content-center mt-5">
-        <div class="card" style="width: 18rem;" v-for="item in cardsList">
-            <img :src="getImagePath(item.image)" class="card-img-top" :alt="item.description">
+    <section class="d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img :src="getImagePath(image)" class="card-img-top" :alt="description">
             <div class="card-body">
-                <h5 class="card-title">{{ item.title }}</h5>
-                <p class="card-text">{{ item.description }}</p>
-                <span>{{ item.price }} </span>
+                <h5 class="card-title">{{ title }}</h5>
+                <p class="card-text">{{ description }}</p>
+                <span>{{ price }} </span>
             </div>
         </div>
 
@@ -57,6 +38,10 @@ export default {
 
 <style scoped lang="scss">
 @use '../style/partials/variables.scss' as *;
+section{
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+}
 div.card{
     border: white;
 
