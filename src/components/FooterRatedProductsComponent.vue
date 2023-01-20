@@ -47,7 +47,7 @@ export default {
 @use '../style/partials/variables.scss' as *;
 div.wrap-div {
     color: white ;
-    font-size: .8rem;
+   
    
 }
     ul{
@@ -58,7 +58,7 @@ div.wrap-div {
 
     img {
         width: 60px;
-        margin-left: -2rem;
+        margin-left: -6rem;
     }
 
     p {

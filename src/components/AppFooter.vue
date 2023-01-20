@@ -3,7 +3,8 @@ import FooterTopComponent from './FooterTopComponent.vue'
 import FooterInfoComponent from './FooterInfoComponent.vue'
 import FooterRatedProductsComponent from './FooterRatedProductsComponent.vue'
 import FooterPostsComponent from './FooterPostsComponent.vue'
-
+import FooterTagsComponent from './FooterTagsComponent.vue'
+import FooterBottomComponent from './FooterBottomComponent.vue'
 
 export default {
     components: {
@@ -11,6 +12,8 @@ export default {
         FooterInfoComponent,
         FooterRatedProductsComponent,
         FooterPostsComponent,
+        FooterTagsComponent,
+        FooterBottomComponent,
 
     },
 
@@ -61,14 +64,22 @@ export default {
 <template>
     <FooterTopComponent />
     <section>
-        <div class="d-flex container justify-content-between">
+        <div class="d-flex container justify-content-around  wrap">
             <FooterInfoComponent />
             <div>
                 <FooterRatedProductsComponent v-for="item in  footerRatedList" :image="item.image" :name="item.name" :price="item.price" :title="item.title" />
             </div>
             <FooterPostsComponent />
+            <div>
+                <FooterTagsComponent/>
+            </div>
         </div>
     </section>
+    <div class="low-footer d-flex justify-content-center">
+        <div class="text-center">
+            <FooterBottomComponent/>
+        </div>
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -76,5 +87,14 @@ export default {
 
 section {
     background-color: $shark-color ;
+    div.wrap{
+        padding: 3rem;
+    }
+}
+
+
+div.low-footer{
+    background-color: black;
+    padding: 3rem 0 1rem 0;
 }
 </style>

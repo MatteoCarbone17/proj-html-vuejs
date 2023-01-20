@@ -67,9 +67,11 @@ img{
 li{
     list-style-type: none;
     color: white;
+    margin-bottom: .5rem;
     i{
         color: white;
         margin-right: 1.3rem;
+       
     
     }
 }

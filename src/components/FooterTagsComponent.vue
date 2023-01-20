@@ -1,32 +1,35 @@
 <script>
 export default {
-    
+
 }
 </script>
 
 <template>
     <div>
         <p>
-            Recent posts
+            Tags
         </p>
         <ul>
             <li>
-                Aenean lobortis sapien enim viverra
+                Black  boots      Brown      Casual
             </li>
             <li>
-                Duis ac massa semper maximus
+                D&G   Fabric   flowers     Gray
             </li>
             <li>
-                Nunc fermit nulla eu justo sem id 
+                Hat      Hipster     lines
             </li>
             <li>
-               Aliquam posuere magna eget nibh
+                Multi-purpose NewYork
             </li>
             <li>
-               Cras ac nulla ac consecte ruturm 
+                Outdoors red responsive 
             </li>
             <li>
-                Fusca mattis nunc ut aliquam 
+               summer  sveater  Travel  
+            </li>
+            <li>
+              Warn  White    winter 
             </li>
         </ul>
     </div>
@@ -41,10 +44,11 @@ div{
        
     }
     li{
-        list-style-type: "> "; 
+        list-style-type: none; 
         margin-left: -2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         font-size: .8rem;
     }
 }
+    
 </style>

@@ -53,7 +53,7 @@ section {
 }
 
 ul {
-
+    margin-left: -2rem;
     height: 50px;
 
     li {
@@ -64,6 +64,7 @@ ul {
     }
 
 }
+
 
 .nav {
     height: 50px;
