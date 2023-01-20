@@ -7,6 +7,7 @@ import JumboCardsComponent from './JumboCardsComponent.vue';
 import BannerComponent from './BannerComponent.vue';
 import BannerLowComponent from './BannerLowComponent.vue';
 import ListMainComponent from './ListMainComponent.vue';
+import BrandComponent from './BrandComponent.vue'
 
 export default {
 
@@ -19,6 +20,7 @@ export default {
         BannerComponent,
         BannerLowComponent,
         ListMainComponent,
+        BrandComponent,
     },
     data() {
         return {
@@ -188,7 +190,7 @@ export default {
                     name: 'Leather Gloves',
                     rating: "",
                     price: '45$',
-                   
+
                 },
                 {
                     image: 'black_elegant_leather_jacket-120x156',
@@ -229,11 +231,31 @@ export default {
 
 
             ],
+            BrandList: [
+                {
+                    image: 'b_logotype_6'
+                },
+                {
+                    image: 'b_logotype_7'
+                },
+                {
+                    image: 'b_logotype_1'
+                },
+                {
+                    image: 'b_logotype_2'
+                },
+                {
+                    image: 'b_logotype_3'
+                },
+            ],
         }
     },
     methods: {
         getImagePath: function (imgPath) {
             return new URL(`../assets/img/${imgPath}.jpg`, import.meta.url).href;
+        },
+        getBrandPath: function (imgPath) {
+            return new URL(`../assets/img/${imgPath}.png`, import.meta.url).href;
         }
     }
 }
@@ -266,27 +288,51 @@ export default {
     </section>
     <hr>
     <section class="w-50 m-auto">
-        <div class="d-flex justify-content-between  wrap">
+        <div class="d-flex justify-content-between">
             <div class="">
                 <ListMainComponent v-for="itemCard in  articleList" :image="itemCard.image" :title="itemCard.title"
-                :price="itemCard.price" :name="itemCard.name" />   
+                    :price="itemCard.price" :name="itemCard.name" />
             </div>
             <div class="">
-                <ListMainComponent v-for="itemCard in   articleOnsaleList" :image="itemCard.image" :title="itemCard.title"
-                :price="itemCard.price" :name="itemCard.name" />   
+                <ListMainComponent v-for="itemCard in   articleOnsaleList" :image="itemCard.image"
+                    :title="itemCard.title" :price="itemCard.price" :name="itemCard.name" />
             </div>
             <div class="">
-                <ListMainComponent v-for="itemCard in articleTopRatedList" :image="itemCard.image" :title="itemCard.title"
-                :price="itemCard.price" :name="itemCard.name" />   
+                <ListMainComponent v-for="itemCard in articleTopRatedList" :image="itemCard.image"
+                    :title="itemCard.title" :price="itemCard.price" :name="itemCard.name" />
             </div>
             <div class="">
-                <ListMainComponent v-for="itemCard in  articleLatestReviewsList" :image="itemCard.image" :title="itemCard.title"
-                :price="itemCard.price" :name="itemCard.name" />   
+                <ListMainComponent v-for="itemCard in  articleLatestReviewsList" :image="itemCard.image"
+                    :title="itemCard.title" :price="itemCard.price" :name="itemCard.name" />
+            </div>
+        </div>
+    </section>
+    <section class="brand-logo">
+        <div class="container wrap">
+            <h5 class="text-center">
+                brand logos
+            </h5>
+            <div class="d-flex justify-content-center align-items-center">
+                <BrandComponent v-for="itemCard in  BrandList" :image="itemCard.image" />
             </div>
         </div>
     </section>
 </template>
 
 <style scoped lang="scss">
+section.brand-logo {
+    background-color: rgb(246, 246, 246);
+  
 
+    h5 {
+        padding-top: 3rem;
+        text-transform: uppercase;
+        font-weight: 200;
+    }
+
+    div.wrap {
+        height: 100%;
+        padding-bottom: 3rem;
+    }
+}
 </style>
