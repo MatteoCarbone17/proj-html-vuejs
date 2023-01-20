@@ -6,7 +6,7 @@
   <section>
     <div class="container">
         <div class="row">
-            <div class="col d-flex justify-content-center">
+            <div class="col d-flex justify-content-center align-items-center">
                <div class="icon">
                 <i class="fa-regular fa-envelope"></i>
                </div>
@@ -30,7 +30,7 @@ section{
 background-color:$dark-shark-color;
 padding: 5rem;
     h3{
-        margin-left: 5rem;
+        margin-left: 2rem;
         margin-right: 5rem;
         font-weight: 700;
     }

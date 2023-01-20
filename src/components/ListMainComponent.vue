@@ -54,6 +54,7 @@ hr{
 div.wrap-div {
     color: $edward-color ;
     font-size: .9rem;
+    margin-top: 3rem;
 }
     ul{
         margin-left: -2rem;

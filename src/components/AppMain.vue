@@ -322,6 +322,7 @@ export default {
 <style scoped lang="scss">
 section.brand-logo {
     background-color: rgb(246, 246, 246);
+    margin-top: 3.5rem;
   
 
     h5 {
