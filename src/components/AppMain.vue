@@ -160,7 +160,55 @@ export default {
                 {
                     title: 'On sale',
                     image: 'black_elegant_leather_jacket-120x156',
-                    name: 'Black Jacket',
+                    name: 'Black leather Jacket',
+                    rating: "",
+                    price: '235$',
+                    priceOnSales: '200$',
+                },
+                {
+                    image: 'blue_leather_jacket-120x156',
+                    name: 'Black leather Jacket',
+                    rating: "",
+                    price: '235$',
+                    priceOnSales: '200$',
+                },
+                {
+                    image: 'modern_leather_boots-120x156',
+                    name: 'Modern Leather Boots',
+                    price: '30$',
+                    priceOnSales: '',
+                },
+
+
+            ],
+            articleTopRatedList: [
+                {
+                    title: 'Top rated',
+                    image: 'leather_gloves-120x156',
+                    name: 'Leather Gloves',
+                    rating: "",
+                    price: '45$',
+                   
+                },
+                {
+                    image: 'black_elegant_leather_jacket-120x156',
+                    name: 'Black leather Jacket',
+                    rating: "",
+                    price: '200$',
+                },
+                {
+                    image: 'spring_printed_dress-120x156',
+                    name: 'Spring Printed Dress',
+                    price: '47$',
+                },
+
+
+            ],
+            articleLatestReviewsList: [
+                {
+                    title: 'Latest reviews',
+                    image: 'blue_leather_jacket-120x156',
+                    name: 'Black leather Jacket',
                     rating: "",
                     price: '235$',
                     priceOnSales: '200$',
@@ -173,14 +221,14 @@ export default {
                     priceOnSales: '200$',
                 },
                 {
-                    image: 'hipster_black_top-120x156',
-                    name: 'Hipster Black Top',
-                    price: '57$',
+                    image: 'modern_leather_boots-120x156',
+                    name: 'Modern Leather Boots',
+                    price: '30$',
                     priceOnSales: '',
                 },
 
 
-            ]
+            ],
         }
     },
     methods: {
@@ -217,22 +265,22 @@ export default {
             :description="itemCard.description" :comment="itemCard.comment" />
     </section>
     <hr>
-    <section class="container">
+    <section class="w-50 m-auto">
         <div class="d-flex justify-content-between  wrap">
             <div class="">
                 <ListMainComponent v-for="itemCard in  articleList" :image="itemCard.image" :title="itemCard.title"
                 :price="itemCard.price" :name="itemCard.name" />   
             </div>
             <div class="">
-                <ListMainComponent v-for="itemCard in  articleList" :image="itemCard.image" :title="itemCard.title"
+                <ListMainComponent v-for="itemCard in   articleOnsaleList" :image="itemCard.image" :title="itemCard.title"
                 :price="itemCard.price" :name="itemCard.name" />   
             </div>
             <div class="">
-                <ListMainComponent v-for="itemCard in  articleList" :image="itemCard.image" :title="itemCard.title"
+                <ListMainComponent v-for="itemCard in articleTopRatedList" :image="itemCard.image" :title="itemCard.title"
                 :price="itemCard.price" :name="itemCard.name" />   
             </div>
             <div class="">
-                <ListMainComponent v-for="itemCard in  articleList" :image="itemCard.image" :title="itemCard.title"
+                <ListMainComponent v-for="itemCard in  articleLatestReviewsList" :image="itemCard.image" :title="itemCard.title"
                 :price="itemCard.price" :name="itemCard.name" />   
             </div>
         </div>

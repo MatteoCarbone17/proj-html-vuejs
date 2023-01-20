@@ -24,11 +24,11 @@ export default {
 </script>
 
 <template>
-    <div class="row">
+    <div class="row wrap-div">
         <h5>
             {{ title }}
         </h5>
-        <div class="wrap-div d-flex justify-content-between">
+        <div class="d-flex justify-content-between">
             <ul>
                 <li>
                     {{ name }}
@@ -48,13 +48,13 @@ export default {
 @use '../style/partials/variables.scss' as *;
 
 hr{
-    width: 95%;
+    width: 80%;
     margin-top: 1rem;
 }
 div.wrap-div {
     color: $edward-color ;
-    font-size: .7rem;
-
+    font-size: .9rem;
+}
     ul{
         margin-left: -2rem;
     }
@@ -64,18 +64,19 @@ div.wrap-div {
 
 
     img {
-        width: 50px;
-        margin-left: 2rem;
+        width: 60px;
+        margin-right: 3rem;
     }
 
     h5 {
         text-transform: uppercase;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+        color: rgb(79, 79, 79);
     }
 
     li {
         list-style-type: none;
 
     }
-}
+
 </style>
