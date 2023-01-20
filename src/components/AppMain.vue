@@ -6,6 +6,7 @@ import CardsComponent from './CardsComponent.vue';
 import JumboCardsComponent from './JumboCardsComponent.vue';
 import BannerComponent from './BannerComponent.vue';
 import BannerLowComponent from './BannerLowComponent.vue';
+import ListMainComponent from './ListMainComponent.vue';
 
 export default {
 
@@ -17,6 +18,7 @@ export default {
         JumboCardsComponent,
         BannerComponent,
         BannerLowComponent,
+        ListMainComponent,
     },
     data() {
         return {
@@ -129,6 +131,56 @@ export default {
                 },
 
             ],
+            articleList: [
+                {
+                    title: ' featured',
+                    image: 'black_leather_jacket-120x156',
+                    name: 'Black Jacket',
+                    rating: "",
+                    price: '235$',
+                    priceOnSales: '200$',
+                },
+                {
+                    image: 'black_elegant_leather_jacket-120x156',
+                    name: 'Black leather Jacket',
+                    rating: "",
+                    price: '235$',
+                    priceOnSales: '200$',
+                },
+                {
+                    image: 'hipster_black_top-120x156',
+                    name: 'Hipster Black Top',
+                    price: '57$',
+                    priceOnSales: '',
+                },
+
+
+            ],
+            articleOnsaleList: [
+                {
+                    title: 'On sale',
+                    image: 'black_elegant_leather_jacket-120x156',
+                    name: 'Black Jacket',
+                    rating: "",
+                    price: '235$',
+                    priceOnSales: '200$',
+                },
+                {
+                    image: 'black_elegant_leather_jacket-120x156',
+                    name: 'Black leather Jacket',
+                    rating: "",
+                    price: '235$',
+                    priceOnSales: '200$',
+                },
+                {
+                    image: 'hipster_black_top-120x156',
+                    name: 'Hipster Black Top',
+                    price: '57$',
+                    priceOnSales: '',
+                },
+
+
+            ]
         }
     },
     methods: {
@@ -164,7 +216,27 @@ export default {
             v-for="itemCard in  BlogCardsList" :image="itemCard.image" :title="itemCard.title"
             :description="itemCard.description" :comment="itemCard.comment" />
     </section>
-
+    <hr>
+    <section class="container">
+        <div class="d-flex justify-content-between  wrap">
+            <div class="">
+                <ListMainComponent v-for="itemCard in  articleList" :image="itemCard.image" :title="itemCard.title"
+                :price="itemCard.price" :name="itemCard.name" />   
+            </div>
+            <div class="">
+                <ListMainComponent v-for="itemCard in  articleList" :image="itemCard.image" :title="itemCard.title"
+                :price="itemCard.price" :name="itemCard.name" />   
+            </div>
+            <div class="">
+                <ListMainComponent v-for="itemCard in  articleList" :image="itemCard.image" :title="itemCard.title"
+                :price="itemCard.price" :name="itemCard.name" />   
+            </div>
+            <div class="">
+                <ListMainComponent v-for="itemCard in  articleList" :image="itemCard.image" :title="itemCard.title"
+                :price="itemCard.price" :name="itemCard.name" />   
+            </div>
+        </div>
+    </section>
 </template>
 
 <style scoped lang="scss">

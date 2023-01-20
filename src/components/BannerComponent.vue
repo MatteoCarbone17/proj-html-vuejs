@@ -76,11 +76,7 @@ div.wrap-card {
             font-size: 2.5rem;
         }
 
-        p {
-           
-           
-
-        }
+       
 
         button {
             border-radius: 3rem;
