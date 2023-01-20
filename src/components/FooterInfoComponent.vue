@@ -13,7 +13,7 @@ export default {
 
 <template>
     <section>
-        <div class="container d-flex flex-column">
+        <div class="d-flex flex-column">
             <img src="../assets/img/classic_shop_logo_footer.png" alt="" srcset="">
             <ul class="mb-5">
                 <li>
@@ -55,7 +55,7 @@ export default {
 @use '../style/partials/variables.scss' as *;
 
 section{
-    background-color:$dark-shark-color ;
+    padding: 3rem;
 }
 
 img{
