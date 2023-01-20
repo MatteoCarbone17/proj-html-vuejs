@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <img :src="getBrandPath(image)"  :alt="description">
+    <img :src="getBrandPath(image)" alt="logo-brand">
 </template>
 
 <style scoped lang="scss">

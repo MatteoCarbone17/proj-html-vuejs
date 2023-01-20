@@ -289,19 +289,19 @@ export default {
     <hr>
     <section class="w-50 m-auto">
         <div class="d-flex justify-content-between">
-            <div class="">
+            <div>
                 <ListMainComponent v-for="itemCard in  articleList" :image="itemCard.image" :title="itemCard.title"
                     :price="itemCard.price" :name="itemCard.name" />
             </div>
-            <div class="">
+            <div>
                 <ListMainComponent v-for="itemCard in   articleOnsaleList" :image="itemCard.image"
                     :title="itemCard.title" :price="itemCard.price" :name="itemCard.name" />
             </div>
-            <div class="">
+            <div>
                 <ListMainComponent v-for="itemCard in articleTopRatedList" :image="itemCard.image"
                     :title="itemCard.title" :price="itemCard.price" :name="itemCard.name" />
             </div>
-            <div class="">
+            <div>
                 <ListMainComponent v-for="itemCard in  articleLatestReviewsList" :image="itemCard.image"
                     :title="itemCard.title" :price="itemCard.price" :name="itemCard.name" />
             </div>
